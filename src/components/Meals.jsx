@@ -20,7 +20,7 @@ const Meals = () => {
         {meals.map((singleMeal) => { 
             const { idMeal, strMeal: title, strMealThumb: image } = singleMeal;
             return <article key={idMeal} className="single-meal">
-                <img src={image} className="img" onClick={() => selectMeal(idMeal)}/>
+                <img src={image} className="img" alt={image} onClick={() => selectMeal(idMeal)}/>
                 <footer>
                     <h5>{title}</h5>
                     <button className="like-btn" onClick={() => addToFavourites(idMeal)}><BsHandThumbsUp/></button>
